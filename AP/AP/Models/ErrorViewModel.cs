@@ -1,5 +1,3 @@
-using System;
-
 namespace AP.Models
 {
     public class ErrorViewModel

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using AP.Models;
 using Microsoft.AspNetCore.Mvc;
-using AP.Models;
+using System.Diagnostics;
 
 namespace AP.Controllers
 {

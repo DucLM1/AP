@@ -1,0 +1,6 @@
+D:\Projects\AutoPortal\AP\AP\AP.Core\bin\Debug\netcoreapp2.2\AP.Core.deps.json
+D:\Projects\AutoPortal\AP\AP\AP.Core\bin\Debug\netcoreapp2.2\AP.Core.dll
+D:\Projects\AutoPortal\AP\AP\AP.Core\obj\Debug\netcoreapp2.2\AP.Core.csproj.CoreCompileInputs.cache
+D:\Projects\AutoPortal\AP\AP\AP.Core\obj\Debug\netcoreapp2.2\AP.Core.AssemblyInfoInputs.cache
+D:\Projects\AutoPortal\AP\AP\AP.Core\obj\Debug\netcoreapp2.2\AP.Core.AssemblyInfo.cs
+D:\Projects\AutoPortal\AP\AP\AP.Core\obj\Debug\netcoreapp2.2\AP.Core.csprojAssemblyReference.cache

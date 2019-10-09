@@ -4438,6 +4438,48 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "AP.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "AP.Core": "1.0.0",
+          "AP.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AP.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AP.Application.dll": {}
+        }
+      },
+      "AP.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/AP.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AP.Core.dll": {}
+        }
+      },
+      "AP.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "Microsoft.Extensions.Configuration.Binder": "2.2.0",
+          "Microsoft.Extensions.Hosting": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/AP.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AP.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -12064,10 +12106,26 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "AP.Application/1.0.0": {
+      "type": "project",
+      "path": "../AP.Application/AP.Application.csproj",
+      "msbuildProject": "../AP.Application/AP.Application.csproj"
+    },
+    "AP.Core/1.0.0": {
+      "type": "project",
+      "path": "../AP.Core/AP.Core.csproj",
+      "msbuildProject": "../AP.Core/AP.Core.csproj"
+    },
+    "AP.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../AP.Infrastructure/AP.Infrastructure.csproj",
+      "msbuildProject": "../AP.Infrastructure/AP.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "AP.Application >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0"
@@ -12102,7 +12160,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects\\AutoPortal\\AP\\AP\\AP.Application\\AP.Application.csproj": {
+              "projectPath": "D:\\Projects\\AutoPortal\\AP\\AP\\AP.Application\\AP.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
