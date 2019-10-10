@@ -1,8 +1,11 @@
-﻿using AP.Infrastructure.Caching.Configs;
+﻿using AP.Infrastructure.Caching;
+using AP.Infrastructure.Caching.Configs;
+using AP.Infrastructure.Caching.Interfaces;
 using AP.Infrastructure.Utility;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System;
+using System.IO;
 using System.IO.Compression;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -15,7 +18,7 @@ namespace AP.Application.Middlewares
         private static readonly object lockedObject = new object();
         private static readonly string _excludePatterns = AppSettings.Get("Cache:CachePage:ExcludedPathPattern", "");
         private static readonly string cacheKeyPrefix = AppSettings.Get("Cache:CachePage:KeyPrefix", "");
-        //private readonly ICached _cacheClient;
+        private readonly ICached _cacheClient;
         //private readonly ILogger _logger;
         private readonly RequestDelegate next;
 
@@ -24,7 +27,7 @@ namespace AP.Application.Middlewares
         public CachePageMiddleware(RequestDelegate next, ILoggerFactory logger)
         {
             var config = AppSettings.Get<RedisConfig>("Cache:Redis:Page");
-            //_cacheClient = new RedisCached(config);
+            _cacheClient = new RedisCached(config);
             //_logger = logger.CreateLogger("CachePageMiddleware");
             this.next = next;
         }
