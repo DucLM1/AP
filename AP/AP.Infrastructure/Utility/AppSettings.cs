@@ -25,6 +25,17 @@ namespace AP.Infrastructure.Utility
         {
             Configuration = configuration;
         }
+        public string GetConnection(string key, string defaultValue = "")
+        {
+            try
+            {
+                return Configuration.GetConnectionString(key);
+            }
+            catch
+            {
+                return defaultValue;
+            }
+        }
 
         public static T Get<T>(string key = null)
         {

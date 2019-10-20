@@ -1,8 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AP.Infrastructure.Serialization
 {
@@ -26,7 +24,7 @@ namespace AP.Infrastructure.Serialization
             {
                 return JsonConvert.DeserializeObject<T>(jsonString, MicrosoftDateFormatSettings);
             }
-            catch (Exception exception)
+            catch
             {
                 //_loggerES.WriteLogExeption(exception, jsonString);
                 return default;
@@ -45,7 +43,7 @@ namespace AP.Infrastructure.Serialization
                 converters[0] = converter;
                 return JsonConvert.DeserializeObject<T>(jsonString, converters);
             }
-            catch (Exception exception)
+            catch
             {
                 //_loggerES.WriteLogExeption(exception, jsonString, dateTimeFormat);
                 return default;
@@ -58,7 +56,7 @@ namespace AP.Infrastructure.Serialization
             {
                 return JsonConvert.DeserializeObject(jsonString, type);
             }
-            catch (Exception exception)
+            catch
             {
                 //_loggerES.WriteLogExeption(exception, jsonString, type);
                 return default;
@@ -71,7 +69,7 @@ namespace AP.Infrastructure.Serialization
             {
                 return JsonConvert.SerializeObject(@object, MicrosoftDateFormatSettings);
             }
-            catch (Exception exception)
+            catch
             {
                 // _loggerES.WriteLogExeption(exception);
                 return string.Empty;
@@ -90,7 +88,7 @@ namespace AP.Infrastructure.Serialization
                 converters[0] = converter;
                 return JsonConvert.SerializeObject(@object, converters);
             }
-            catch (Exception exception)
+            catch
             {
                 // _loggerES.WriteLogExeption(exception, dateTimeFormat);
                 return string.Empty;

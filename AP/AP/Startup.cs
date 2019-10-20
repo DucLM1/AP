@@ -46,7 +46,7 @@ namespace AP
 
             //Forces caches to submit the request to the origin server for validation before releasing a cached copy
             app.Use301Middleware();
-            app.UseCachePage();
+            //app.UseCachePage();
 
             #endregion Middleware
 
